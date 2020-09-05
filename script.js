@@ -14,11 +14,10 @@ function backspace() {
 }
 
 function calculate_scr() {
-    raw_problem = calc_screen.innerHTML
-    processed_problem = raw_problem.replace(/x/g, '*')
-    processed_problem = raw_problem.replace(/\^/g, '**')
-    console.log(processed_problem)
-    ans = eval(processed_problem)
+    problem = calc_screen.innerHTML
+    problem = problem.replace(/\x/g, '*')
+    problem = problem.replace(/\^/g, '**')
+    ans = eval(problem)
     calc_screen.innerHTML = ans
 }
 
